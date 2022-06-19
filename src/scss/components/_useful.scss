@@ -1,0 +1,79 @@
+@import '../vars';
+@import '../mixins';
+
+.useful {
+    &__container {
+        overflow: hidden;
+        padding-top: $main-offset;
+        position: relative;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-top: 0;
+    }
+
+    &__swiper-buttons {
+        position: absolute;
+        right: 3px;
+        top: $main-offset;
+        width: 119px;
+    }
+
+    &__slide {
+        max-width: 624px;
+    }
+
+    &__card {
+        padding-top: 458px;
+        grid-template-rows: 1fr auto;
+        align-items: center;
+        height: 676px;
+        background-size: 100% 426px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+
+        &_first {
+            background-image: url('/img/useful-first-slide.webp');
+        }
+
+        &_second {
+            background-image: url('/img/useful-second-slide.webp');
+        }
+
+        &_third {
+            background-image: url('/img/useful-third-slide.webp');
+        }
+
+        &_fourth {
+            background-image: url('/img/useful-fourth-slide.webp');
+        }
+
+        &_fifth {
+            background-image: url('/img/useful-fifte-slide.webp');
+        }
+    }
+}
+
+.card__text {
+    align-self: start;
+    max-height: 130px;
+    overflow: hidden;
+    margin-top: 0;
+    font: $regular-useful-card-font;
+    color: $black;
+}
+
+.usefulSwiper {
+    overflow: hidden;
+}
+
+.swiper-button-prev-useful {
+    position: absolute;
+    left: 9px;
+}
+
+.swiper-button-next-useful {
+    position: absolute;
+    right: 33px;
+}

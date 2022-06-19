@@ -1,0 +1,227 @@
+@import '../vars';
+@import '../mixins';
+
+.glad {
+    &__container {
+        position: relative;
+        padding-top: $main-offset;
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    &__left {
+        max-width: calc(50% - 16px);
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            width: calc(50% - 16px);
+            height: 100%;
+            background-image: url('/img/glad-right.webp');
+            background-position: 0 95px;
+            // background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        border-radius: 10px;
+        padding: 7px 16px;
+        color: $black;
+        font: $regular-glad-input-font;
+        margin-bottom: 26px;
+    }
+
+    &__text-content {
+        font: $regular-glad-content-font;
+        color: $grey_shade;
+        margin-bottom: 11px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__form-label {
+        display: inline-flex;
+        align-items: center;
+        font: $regular-glad-content-font;
+    }
+
+    &__button {
+        font: $preBold-font !important;
+        padding: 17px 33px;
+        margin-bottom: 12px;
+    }
+}
+
+
+//Тултип
+.tooltip__btn {
+    background-image: url('/img/tooltip.svg');
+    border-radius: 10px;
+    width: 14px;
+    height: 14px;
+}
+
+.tooltip {
+    display: inline-flex;
+    position: relative;
+    bottom: 5px;
+}
+
+.tooltip .tooltip-text {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 13px);
+    background-color: $black;
+    color: $white;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    width: max-content;
+    max-width: 157px;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: $transitionOpacity;
+    font: $regular-tooltip-font;
+}
+
+.tooltip__btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 6px);
+    width: 0;
+    height: 0;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: $transitionOpacity;
+    border-style: solid;
+    border-width: 8px 8.5px 0 8.5px;
+    border-color: #004444 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text,
+.tooltip__btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tooltip:hover .tooltip__btn {
+    background-image: url('/img/tooltipHover.svg');
+}
+
+.tooltip__btn:focus {
+    background-image: url('/img/tooltipHover.svg');
+}
+
+.tooltip__btn:focus::after,
+.tooltip__btn:focus+.tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+// Кастомный чекбокс
+.check {
+    position: relative;
+    padding-left: 23px;
+
+    &__input {
+        position: absolute;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    &__box {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        margin-left: -23px;
+        background-color: $white;
+        border: 1px solid $grey;
+        transition: $transitionBack, $transitionBorder;
+    }
+
+    &__violet-text {
+        padding-left: 2px;
+        white-space: nowrap;
+        color: $primary_light;
+        border-bottom: 1px solid $primary_light;
+        outline: none;
+        transition: $transitionBack, $transitionColor, $transitionBorder;
+    }
+
+    &__marker {
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        transition: $transitionOpacity;
+    }
+}
+
+.form__label {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+}
+
+.just-validate-error-label {
+    font: $regular-UltraLight-font;
+    padding-left: 10px;
+    padding-bottom: 6px;
+}
+.check + .just-validate-error-label {
+    padding-left: 23px;
+}
+
+.js-validate-error-field {}
+
+/* Checked */
+
+.check__input:checked+.check__box {
+    background-color: $primary;
+    border-color: $primary;
+}
+
+.check__input:checked+.check__box>svg {
+    opacity: 1;
+}
+
+.green-border {
+    border-color: $green_input !important;
+}
+
+/* Focused */
+
+.check__input:focus-visible+.check__box {
+    border-color: $primary;
+    -webkit-box-shadow: 0px 0px 19px -2px rgba(183, 46, 236, 0.5);
+    -moz-box-shadow: 0px 0px 19px -2px rgba(183, 46, 236, 0.5);
+    box-shadow: 0px 0px 19px -2px rgba(183, 46, 236, 0.5);
+}
+
+/* Hovered */
+
+.check__input:hover+.check__box {
+    border-color: $primary-shade;
+    -webkit-box-shadow: 0px 0px 19px -2px rgba(182, 46, 236, 0.433);
+    -moz-box-shadow: 0px 0px 19px -2px rgba(182, 46, 236, 0.433);
+    box-shadow: 0px 0px 19px -2px rgba(182, 46, 236, 0.433);
+}

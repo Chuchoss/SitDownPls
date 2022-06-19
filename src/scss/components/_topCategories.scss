@@ -1,0 +1,141 @@
+@import '../vars';
+@import '../mixins';
+
+.top-categories {
+
+    &__container {
+        flex-direction: column;
+        padding-top: $main-offset;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    &__item {
+        flex-basis: calc(33.333% - 22px);
+
+        &_sofas {
+            flex-basis: calc(50% - 16px);
+        }
+
+        &_armchairs {
+            flex-basis: calc(50% - 16px);
+        }
+    }
+
+    &__card {
+        height: 405px;
+        grid-template-rows: auto auto 1fr auto;
+        background-repeat: no-repeat;
+        background-position: 0 121px;
+
+        &_sofas {
+            height: 511px;
+        }
+    }
+
+    &__models {
+        align-self: start;
+        display: flex;
+        column-gap: $card-gap;
+        row-gap: 4px;
+        flex-wrap: wrap;
+        margin-bottom: 17px;
+
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        outline: none;
+        justify-self: flex-start;
+        color: $primary;
+        font: $bold-LightMedium-font;
+    }
+
+
+    &__name {
+        pointer-events: none;
+        cursor: default;
+        position: relative;
+        margin-bottom: $card-gap;
+    }
+
+    &__link-text {
+        margin-right: 5px;
+        border-bottom: 2px solid $white;
+        transition: $transitionBorder, $transitionColor;
+    }
+
+    &__armchairs {
+        height: 511px;
+    }
+}
+
+.top-categories__model-name {
+    font: $regular-light-font;
+    color: $grey;
+}
+
+.sidebar-card__link:focus-visible>.sidebar-card__link-text,
+.sidebar-card__link:hover>.sidebar-card__link-text,
+.top-categories__link:hover>.top-categories__link-text,
+.top-categories__link:focus-visible>.top-categories__link-text {
+    border-bottom-color: $primary;
+}
+
+.top-categories__link:active>.top-categories__link-text {
+    border-bottom-color: $primary_shade;
+    color: $primary_shade;
+    ;
+}
+
+.top-categories__name-text {
+    margin-right: 5px;
+}
+
+.top-categories__name-arrow {
+    position: absolute;
+    bottom: -3px;
+}
+
+
+.sofas-card {
+    background-image: url('/img/tops-sofas.webp');
+    background-size: 515px 308px;
+
+}
+
+.armchairs-card {
+    background-image: url('/img/tops-armchairs.webp');
+    background-size: 515px 308px;
+}
+
+.beds-card {
+    background-image: url('/img/tops-beds.webp');
+    background-size: 306px 202px;
+}
+
+.pedestals-card {
+    background-image: url('/img/tops-pedestals.webp');
+    background-size: 330px 202px;
+}
+
+.chairs-card {
+    background-image: url('/img/tops-chairs.webp');
+    background-size: 258px 202px;
+}
+
+.raiting {
+
+    &__title {
+        padding-left: 2px;
+    }
+}
+
+.top-categories__name-arrow {
+    display: none;
+}

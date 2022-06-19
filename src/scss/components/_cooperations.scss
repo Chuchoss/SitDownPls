@@ -1,0 +1,168 @@
+@import '../vars';
+@import '../mixins';
+
+.cooperations {
+
+    &__container {
+        padding-top: $card-main-gap;
+        padding-bottom: 92px;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: $black;
+        font: $regular-hight-font;
+        margin-top: 0;
+        margin-bottom: 36px;
+    }
+}
+
+.suppliers {
+    margin-bottom: $card-main-gap;
+}
+
+.cooperations__wrapper {
+    width: 65%;
+}
+
+.cooperations__small-title {
+    color: $black;
+    font: $regular-preHight-font;
+    margin-top: 0;
+    margin-bottom: $cooperations-small-gap
+}
+
+.cooperations-paragraph {
+    font: $regular-cooperations-font;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $grey_shade;
+}
+
+.warranty-item:not(last-child) {
+    margin-bottom: $cooperations-small-gap;
+}
+
+.profits {
+    width: 74%;
+    margin-bottom: 36px;
+
+    &__title {
+        margin-bottom: $cooperations-small-gap
+    }
+
+    &__paragraph {
+        font: $regular-cooperationsMedium-font;
+        position: relative;
+        padding-left: 37px;
+
+        &_first {
+            margin-bottom: $cooperations-small-gap;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 25px;
+                height: 25px;
+                background-image: url('/img/profits-paragraph_first.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &_second {
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 25px;
+                height: 25px;
+                background-image: url('/img/profits-paragraph_second.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            margin-bottom: $cooperations-small-gap
+        }
+
+        &_third {
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 25px;
+                height: 25px;
+                background-image: url('/img/profits-paragraph_third.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+.advatage__paragraph-title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: $secondary;
+    font: $preBold-cooperations-font;
+}
+
+.advantage {
+    margin-bottom: $card-main-gap;
+
+    &__paragraph {
+
+        &_first {
+            margin-bottom: $cooperations-small-gap;
+        }
+    }
+}
+
+.advatage {
+
+    &__small-title {}
+}
+
+.warranty {
+
+    &-item {
+        position: relative;
+        padding-left: 26px;
+    }
+
+    &__marker {
+        position: absolute;
+        left: 0;
+        color: $secondary;
+        font: $preBold-cooperations-second-font;
+    }
+
+    &__note {
+        display: block;
+        font: $regular-cooperationsHight-font;
+        color: $black;
+        padding-left: 109px;
+        position: relative;
+        max-width: 80%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: 0;
+            width: 77px;
+            height: 116px;
+            background-image: url('/img/pencil.webp');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+.warranty-list {
+    margin-bottom: 54px;
+}

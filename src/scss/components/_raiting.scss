@@ -1,0 +1,85 @@
+@import '../vars';
+@import '../mixins';
+
+.display-none {
+    display: none;
+}
+
+.opacity-on {
+    opacity: 0;
+}
+
+.raiting__cards-item {
+    transition: $transitionOpacity;
+}
+
+.raiting {
+
+    &__container {
+        padding-top: $main-offset;
+        padding-bottom: $main-offset;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 26px;
+    }
+
+    &__cards-list {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(auto, 296px));
+        gap: $card-main-gap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        margin-bottom: $card-main-gap;
+    }
+
+    &__star {
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+        fill: $secondary;
+    }
+}
+
+.raiting__more-button {
+    align-self: center;
+    padding: 20px 34px;
+}
+
+.raiting-card {
+    grid-template-rows: auto 1fr auto auto auto;
+    min-height: 420px;
+    box-sizing: border-box;
+
+    picture {
+        margin-bottom: 17px;
+    }
+
+    &__grade-wrapper {
+        align-self: start;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__grade {
+        font: $regular-medium-font;
+        color: $secondary;
+    }
+
+    &__name-model {
+        white-space: nowrap;
+    }
+
+    &__price {
+        color: $grey_shade;
+        font: $regular-medium-font;
+    }
+
+    &__name {
+        // overflow: hidden;
+        max-height: 100%;
+    }
+}

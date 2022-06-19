@@ -1,0 +1,30 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import '../resources/choices.min';
+@import '../resources/graph-modal.min';
+@import '../resources/swiper-bundle.min';
+@import '../resources/nouislider.min';
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/hero";
+@import "./components/special";
+@import "./components/raiting";
+@import "./components/banner-block";
+@import "./components/topCategories";
+@import "./components/useful";
+@import "./components/glad";
+@import "./components/footer";
+
+
+@import "./components/catalog-slider";
+@import "./components/catalog-sidebar";
+
+
+@import "./components/card-product-D31";
+@import "./components/similar-products";
+@import "./components/cooperations";
+@import "./components/media";

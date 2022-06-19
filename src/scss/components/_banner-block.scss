@@ -1,0 +1,35 @@
+@import '../vars';
+@import '../mixins';
+
+.banner-block {
+    background-image: url('/img/block-banner.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 156px;
+        padding-bottom: 149px;
+    }
+
+    &__text {
+        max-width: 508px;
+        font: $bold-hiest-font;
+        color: $gold;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__model-name {
+        max-width: 508px;
+        font: $regular-ultraHight-font;
+        color: $white;
+        margin-top: 0;
+        margin-bottom: 47px;
+    }
+
+    &__button {
+        padding: 20px 30px;
+    }
+}

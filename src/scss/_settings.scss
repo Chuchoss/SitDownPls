@@ -1,0 +1,347 @@
+html {
+  background-color: $white;
+  // scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+  margin: 0;
+  font-family: "Open-Sans", sans-serif;
+  font-weight: 400;
+  min-width: 280px;
+  min-height: 100%;
+  font-size: 14px;
+  line-height: 14px;
+  background-color: $white;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-container {
+  background-color: $white;
+  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+}
+
+.is-hidden {
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
+}
+
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.title {
+  font: $regular-hight-font;
+  line-height: 100%;
+  color: $black;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  padding: 0 $main-container-offset;
+  max-width: $container-width;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: $grey;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: $grey;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: $grey;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: $grey;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: $white;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: none;
+  transition: $transitionBack, $transitionColor, $transitionBorder;
+}
+
+.loading {
+  overflow: hidden;
+}
+
+.loading::before {
+  content: '';
+  background: rgb(246, 244, 246);
+  background: linear-gradient(180deg, rgba(246, 244, 246, 1) 29%, rgba(218, 0, 184, 0.269642891336222) 92%);
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  z-index: 110;
+  width: 100px;
+  height: 100px;
+  background-image: url('../loading.gif');
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.menu-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.link-effects {
+  &:hover {
+    color: $primary;
+  }
+
+  &:focus-visible {
+    background: $pink_violet;
+    color: $primary_shade;
+  }
+
+  &:active {
+    background-color: $white;
+    color: $primary_shade;
+    border-color: $primary_shade;
+  }
+}
+
+.primary-btn {
+  border: 2px solid $primary;
+  background-color: $primary;
+  color: $white;
+  font: $bold-medium-font;
+
+  &:hover {
+    background-color: $primary_light;
+    border-color: $primary_light;
+  }
+
+  &:focus-visible {
+    background-color: $primary_light;
+    border-color: $primary_shade;
+  }
+
+  &:active {
+    background-color: $primary_shade;
+    border-color: $primary_shade;
+  }
+
+  &:disabled {
+    background-color: $md_grey;
+    border-color: $md_grey;
+    color: $grey;
+  }
+}
+
+.empty-btn {
+  font: $preBold-font;
+  border: 2px solid $primary;
+  background-color: none;
+  color: $primary;
+
+  &:hover {
+    background-color: $primary_light;
+    border-color: $primary_light;
+    color: $white;
+  }
+
+  &:focus-visible {
+    border-color: $primary_shade;
+    background-color: $primary_light;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $primary_shade;
+    border-color: $primary_shade;
+    color: $white;
+  }
+}
+
+.circle-btn {
+  position: absolute;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  right: 33px;
+  transition: $transitionFill;
+}
+
+.circle-effects {
+  transition: $transitionFill;
+
+  >svg {
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+
+    >path {
+      transition: $transitionStroke;
+    }
+
+    >circle {
+      transition: $transitionStroke;
+    }
+  }
+
+  &:hover {
+    >svg {
+      background-color: $primary;
+
+      >path {
+        stroke: $white;
+      }
+    }
+  }
+
+  &:focus-visible {
+    >svg {
+      background-color: $primary_light;
+
+      >path {
+        stroke: $white;
+      }
+    }
+  }
+
+  &:active {
+    >svg {
+      background-color: $primary_shade;
+
+      >path {
+        stroke: $white;
+      }
+
+      >circle {
+        stroke: $primary_shade;
+      }
+    }
+  }
+
+  &:disabled {
+    >svg {
+      background-color: inherit;
+
+      >path {
+        stroke: $grey;
+      }
+
+      >circle {
+        stroke: $grey;
+      }
+    }
+  }
+}

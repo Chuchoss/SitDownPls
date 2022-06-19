@@ -1,0 +1,36 @@
+@import '../vars';
+@import '../mixins';
+
+.similar-products {
+
+    &__container {
+        position: relative;
+        flex-direction: column;
+    }
+
+    &__title {
+        font: $regular-useful-card-font;
+        margin: 0;
+    }
+
+    &__swiper-buttons {
+        position: absolute;
+        right: 26px;
+        top: 20px;
+        width: 96px;
+    }
+
+    &__swiper-wrappeer {
+        padding-bottom: $main-offset;
+        padding-top: 21px;
+    }
+}
+
+.swiper-button-prev {
+    transform: rotate(180deg);
+    height: 32px;
+}
+
+.swiper-button-next {
+    height: 32px;
+}

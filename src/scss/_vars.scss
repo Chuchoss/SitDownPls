@@ -1,0 +1,90 @@
+$primary: #A65CF0;
+$primary_light: #C998FB;
+$primary_shade: #7033AC;
+$pink_light: #F8EFFF;
+$pink_violet: #EBD1FF;
+$secondary: #FF862F;
+$secondary_light: #FFBD59;
+$secondary_shade: #BB370E;
+$red_input: #FF6972;
+$green_input: #B8EC64;
+$gold: #D5B986;
+$white: #FFF;
+$grey_light: #F7F7F7;
+$md_grey: #EAEAEA;
+$grey: #999;
+$grey_shade: #666;
+$black: #333;
+$lime_color: #DAFFD1;
+$bone: #FFF5D1;
+
+//Отступы
+$cooperations-small-gap: 12px;
+$cards-mobile-gap:16px;
+$card-main-gap: 32px;
+$card-gap: 30px;
+$card-row-gap: 22px;
+$sidebar-gap: 26px;
+$main-offset: 70px;
+$main-container-offset: 36px;
+$container-width: 1352px;
+
+
+//шрифты
+$openSans-family: 'Open-Sans', Arial;
+$playfair-family: 'Playfair-display', Open-Sans, Arial;
+
+$bold-hiest-font: 900 60px/ 72px $playfair-family;
+$bold-hiest-mobile-font: 900 24px/ 29px $playfair-family;
+$bold-hight-font: 700 48px/ 65px $openSans-family;
+$bold-preHight-font: 700 48px/ 57px $openSans-family;
+$bold-MediumHigh-font: 700 35px/ 50px $openSans-family;
+$bold-LightHigh-font: 700 20px/ 27px $openSans-family;
+$bold-LightMedium-font: 700 16px/ 19px $openSans-family;
+$bold-Light-font: 700 14px/ 19px $openSans-family;
+$bold-medium-font: 700 16px/ 16px $openSans-family;
+$bold-lightUltra-font: 700 10px/ 10px $openSans-family;
+$preBold-cooperations-second-font: 600 16px/ 29px $openSans-family;
+$preBold-cooperations-font: 600 16px/ 22px $openSans-family;
+$preBold-font: 600 16px/ 16px $openSans-family;
+$regular-ultraHight-font: 400 48px/57.6px $openSans-family;
+$regular-product-price-font: 400 36px/ 47px $openSans-family;
+$regular-hight-font: 400 32px/ 32px $openSans-family;
+$regular-useful-card-font: 400 24px/ 33px $openSans-family;
+$regular-cooperationsHight-font: 400 24px/ 36px $openSans-family;
+$regular-preHight-font: 400 24px/ 31px $openSans-family;
+$mobile-title-font: 400 24px/ 24px $openSans-family;
+$regular-hightMedium-font: 400 18px/ 23px $openSans-family;
+$regular-glad-input-font: 400 16px/40px $openSans-family;
+$regular-cooperations-font: 400 16px/29px $openSans-family;
+$regular-mediumMobile-font: 400 16px/26px $openSans-family;
+$regular-cooperationsMedium-font: 400 16px/24px $openSans-family;
+$regular-medium-font: 400 16px/ 22px $openSans-family;
+$regular-some-font-cooperations: 400 15px/ 22px $openSans-family;
+$regular-product-card-text-font: 400 14px/25px $openSans-family;
+$some-font-ul: 400 14px/ 21px $openSans-family;
+$regular-preMedium-font: 400 16px/ 19px $openSans-family;
+$regular-mobile-card-font: 400 16px/ 17px $openSans-family;
+$regular-glad-content-font: 400 14px/19px $openSans-family;
+$regular-light-font: 400 14px/ 14px $openSans-family;
+$regular-UltraLight-font: 400 12px/ 16px $openSans-family;
+$regular-mobileSecondLight-font: 400 10px/ 16px $openSans-family;
+$regular-mobileproduct-font: 400 10px/ 14px $openSans-family;
+$regular-mobileLight-font:400 10px/10px $openSans-family;
+$regular-tooltip-font: 400 9px/14px $openSans-family;
+
+//Транзишены
+$trnasitionTimeMedium: 0.5s;
+$trnasitionTime: 0.3s;
+$transitionAnim: ease;
+$transitionAnimElastic: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+$transitionStroke: stroke $trnasitionTime $transitionAnim;
+$transitionFill: fill $trnasitionTime $transitionAnim;
+$transitionColor: color $trnasitionTime $transitionAnim;
+$transitionBorder: border-color $trnasitionTime $transitionAnim;
+$transitionBack: background-color $trnasitionTime $transitionAnim;
+$transitionTransform: transform $trnasitionTime $transitionAnim;
+$trnsitionTransformElastic: transform $trnasitionTimeMedium $transitionAnimElastic;
+$transitionVisibility: visibility 1s $transitionAnim;
+$transitionOpacity: opacity $trnasitionTime $transitionAnim;
+$transitionBoxShadow: box-shadow $trnasitionTime $transitionAnim;

@@ -1,0 +1,354 @@
+@import '../vars';
+@import '../mixins';
+
+.about-product__left {
+    margin-right: $card-main-gap;
+}
+
+.card-product-img,
+.modal-product-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-productSwiper1 .swiper-slide img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    object-fit: unset;
+    margin: 0 auto;
+}
+
+.card-productSwiper1 .swiper-slide {
+    @include flex-all-center;
+}
+
+.card-productSwiper,
+.modal-productSwiper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.card-productSwiper2 {
+    cursor: pointer;
+    height: 245px;
+}
+
+.modal-productSwiper2 {
+    cursor: pointer;
+    height: 518px;
+}
+
+.card-productSwiper1 {
+    background: #F7F7F7;
+    height: 81px;
+    box-sizing: border-box;
+    padding: 10px 25px;
+}
+
+.modal-productSwiper1 {
+    background: #F7F7F7;
+    height: 166px;
+    box-sizing: border-box;
+    padding: 20px 35px;
+}
+
+.swiper-modal-next,
+.swiper-modal-prev {
+    display: none;
+}
+
+.swiper-modal-next {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.swiper-modal-prev {
+    position: absolute;
+    left: 0;
+    transform: translateY(-50%) rotate(-180deg);
+    top: 50%;
+}
+
+.card-productSwiper1 .swiper-slide,
+.modal-productSwiper1 .swiper-slide {
+    height: 100%;
+}
+
+.modal-productSwiper2 {
+    overflow: hidden;
+    padding: 50px 30px;
+}
+
+.graph-modal__container {
+    padding: 0;
+    overflow: hidden;
+}
+
+.graph-modal-buy {
+    width: 624px;
+}
+
+.about-product {
+
+    &__right {
+        padding-top: 17px;
+    }
+
+    &__raiting {
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        font: $regular-preHight-font;
+        color: $black;
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    &__title-descr {
+        font: $regular-light-font;
+        color: $grey;
+        margin-top: 0;
+        margin-bottom: 19px;
+    }
+
+    &__price {
+        font: $regular-product-price-font;
+        color: $black;
+        margin-top: 0;
+        margin-bottom: 21px;
+    }
+
+    &__bue-btn {
+        padding: 17px 30px;
+    }
+
+    &__add-btn {
+        font: $regular-medium-font;
+        padding: 5px 32px;
+        position: relative;
+        top: 8px;
+        color: $primary;
+    }
+}
+
+.about-product {
+    margin: 0;
+    padding-bottom: 82px;
+
+    &__description {
+        margin-top: 0;
+        margin-bottom: 0;
+        color: $black;
+        position: relative;
+        font: $regular-product-card-text-font;
+    }
+
+    &__bottom-left {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 247px;
+            height: 113px;
+            background-image: url(../img/special-sofa.webp);
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 247px;
+            height: 113px;
+            background-image: url(../img/card-product-back.webp);
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: 0;
+            right: 98px;
+        }
+    }
+
+    &__characteristics-list {
+        width: 544px;
+    }
+}
+
+.about-product-section__descr-title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: $black;
+    font: $preBold-font
+}
+
+.aboutproduct {
+
+    &__characteristics-item {
+        display: grid;
+        grid-template-columns: max-content 1fr minmax(220px, auto);
+        justify-content: space-between;
+        width: 100%;
+        align-items: flex-start;
+    }
+}
+
+.border-dots {
+    position: relative;
+    top: 11px;
+    background-image: linear-gradient(to right, $grey 33%, rgba(255, 255, 255, 0) 0%);
+    background-size: 3px 1px;
+    background-repeat: repeat-x;
+    height: 2px;
+}
+
+.characteristic-name {
+    font: $regular-product-card-text-font;
+    position: relative;
+    color: $grey;
+    align-self: start;
+    padding-right: 5px;
+}
+
+.characteristic-value {
+    font: $regular-product-card-text-font;
+    color: $black;
+    background-color: $white;
+    z-index: 2;
+    padding-left: 5px;
+}
+
+.about-product__bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $card-main-gap;
+}
+
+.about-product__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $card-main-gap;
+    margin-bottom: $card-main-gap;
+}
+
+.card-productSwiper1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.about-product__top-right {
+    padding-top: 16px;
+    grid-column: 2/3;
+}
+
+.container-about-product {
+    flex-direction: column;
+    padding-top: 31px;
+}
+
+.raiting {
+
+    &__star {}
+
+    &__text {}
+}
+
+.graph-modal {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.graph-modal-buy {
+    padding: $card-gap;
+}
+
+.buy-modal {
+
+    &__title {
+        margin: 0;
+        margin-bottom: 8px;
+        color: $black;
+        font: $regular-hight-font;
+    }
+
+    &__text {
+        margin: 0;
+        margin-bottom: $card-gap;
+        color: $black;
+        font: $regular-glad-content-font;
+        max-width: 61%;
+    }
+
+    &__form {}
+
+    &__input {
+        width: 100%;
+        border-radius: 10px;
+        padding: 7px 16px;
+        color: $black;
+        font: $regular-glad-input-font;
+        margin-bottom: $card-gap;
+    }
+
+    &__button {
+        padding: 15px 35px;
+        margin-bottom: 12px;
+    }
+}
+
+.buy-modal__form-label+.js-validate-error-label {
+    padding: 10px 0 5px 23px;
+}
+
+.graph-modal__close {
+    z-index: 10;
+}
+
+.about-product__description_first {
+    margin-bottom: 7px;
+}
+
+.graph-modal {
+
+    &__content {
+        height: 100%;
+    }
+}
+
+.thans-message {
+    display: inline-block;
+    width: 624px;
+    height: 421px;
+
+    &__content {
+        @include flex-all-center;
+        flex-direction: column;
+    }
+}
+
+.orange-elephant {
+    margin-bottom: $card-main-gap;
+    fill: $secondary;
+    stroke: $secondary;
+}
+
+.check__input {
+    border: none !important;
+}
+
+.displ-none {
+    display: none !important;
+}

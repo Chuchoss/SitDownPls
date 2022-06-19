@@ -1,0 +1,327 @@
+@import '../vars';
+@import '../mixins';
+
+.sidebar {
+    padding-bottom: 134px;
+
+    &__name {
+        margin-top: 0;
+        margin-bottom: 22px;
+        font: $regular-hightMedium-font;
+        color: $black;
+    }
+
+    &__categories {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $sidebar-gap;
+    }
+
+    &__form-label {
+        padding-left: 31px;
+        font: $regular-medium-font;
+        color: $grey_shade;
+    }
+}
+
+.flag-wrapper {
+    margin-bottom: 16px;
+}
+
+.sidebar__form-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.check {
+    &__box {
+        &_big {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 20px;
+            margin-left: -31px;
+            margin-top: 1px;
+        }
+    }
+}
+
+.categories-list__button-wrapper {
+    display: none!important;
+}
+.show-item {
+    display: block!important;
+}
+.hidden-list {
+    display: none!important;
+}
+
+
+.more-btn {
+    font: $regular-medium-font;
+    color: $primary;
+}
+
+
+.sidebar {
+
+    &__price {
+        margin-bottom: calc($sidebar-gap + 7px);
+    }
+
+
+    &__title {
+        text-align: start;
+        font: $regular-medium-font;
+        color: $grey_shade;
+    }
+}
+
+.price-filter {
+
+    &__inputs-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        font: $regular-medium-font;
+        color: $grey_shade;
+        margin-right: 9px;
+    }
+
+    &__input {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        font: $regular-medium-font;
+        color: $grey_shade;
+        border: 1px solid $grey;
+        padding: 4px 13px;
+        overflow: hidden;
+        width: 86px;
+        height: 30px;
+        outline: none;
+        transition: $transitionBack, $transitionBorder;
+
+        &:hover {
+            border-color: $primary;
+        }
+
+        &:focus {
+            background-color: $pink_violet;
+            border-color: $primary;
+        }
+
+        &:active {
+            border-color: $primary_shade;
+        }
+    }
+}
+
+.sidebar-filter-button {
+    margin-bottom: 7px;
+}
+
+.noUi-horizontal {
+    height: 3px;
+}
+
+.noUi-connect {
+    background: $primary;
+    transition: $transitionBack;
+}
+
+.noUi-target {
+    border: none;
+    background-color: $md_grey;
+}
+
+.noUi-horizontal .noUi-handle {
+    background: inherit;
+    outline: none;
+    width: 0;
+    height: 0;
+    right: -7px;
+    top: -1px;
+    border-style: solid;
+    border-width: 0 6.5px 13px 6.5px;
+    border-color: transparent transparent #a65cf0 transparent;
+    transition: $transitionBorder;
+}
+
+.noUi-handle:after,
+.noUi-handle:before,
+.noUi-handle:after,
+.noUi-handle:before {
+    display: none;
+}
+
+
+.noUi-horizontal .noUi-handle:hover {
+    border-color: transparent transparent $primary_light transparent;
+}
+
+.noUi-horizontal .noUi-handle:focus-visible,
+.noUi-horizontal .noUi-handle:active {
+    border-color: transparent transparent $primary_shade transparent;
+}
+
+.noUi-state-drag>.noUi-base .noUi-connects>.noUi-connect {
+    background-color: $primary_shade !important;
+}
+
+.primaryShade-back {
+    background-color: $primary_shade;
+}
+
+.close-flag-btn:focus-visible::before,
+.close-flag-btn:focus-visible::after {
+    background-color: $primary_shade;
+}
+
+.close-flag-btn:focus-visible::before,
+.close-flag-btn:focus-visible::after {
+    background-color: $primary_light;
+}
+
+.sidebar {
+
+    &__colors {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 79px;
+    }
+
+    &__discounts {
+        margin-bottom: $sidebar-gap;
+    }
+
+    &__discounts-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.some-content {
+    display: flex;
+    align-items: center;
+}
+
+.flags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.categories-list {
+
+    &__button-wrapper {
+    }
+
+    &__button {
+        font: $regular-medium-font;
+        color: $primary;
+    }
+}
+.btn-reset {
+}
+
+
+.close-flag-btn {
+    position: relative;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.close-flag-btn::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    background-color: #666666;
+    transform: rotate(135deg);
+    transition: background-color ease 0.3s;
+}
+
+.close-flag-btn::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    background-color: #666666;
+    transform: rotate(45deg);
+    transition: background-color ease 0.3s;
+}
+
+.main-catalog {
+    position: relative;
+    z-index: 5;
+}
+
+.flag {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 4px 9px;
+    margin-right: 15px;
+    color: #666666;
+}
+
+.sidebar-card {
+    padding-top: 220px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    width: 100%;
+    height: 360px;
+    background: $black;
+    border-radius: 10px;
+    background-image: url('/img/sidebar-card-image.webp');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 296px 190px;
+    overflow: hidden;
+
+    &__text {
+        font: $bold-hiest-mobile-font;
+        color: $gold;
+        margin: 0;
+    }
+
+    &__description {
+        font: $regular-medium-font;
+        color: $grey;
+        margin: 0;
+        margin-bottom: 12px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        font: $bold-LightMedium-font;
+        color: $primary;
+        outline: none;
+    }
+
+    &__link-text {
+        transition: $transitionBorder;
+        margin-right: 5px;
+        border-bottom: 1px solid transparent;
+    }
+}
+
+.catalog__link {
+    outline: none;
+    transition: $transitionColor;
+}
+
+.catalog__link:focus-visible,
+.catalog__link:active {
+    color: $primary_shade;
+}
+
+.catalog__link:hover {
+    color: $primary;
+}

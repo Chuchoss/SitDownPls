@@ -1,0 +1,122 @@
+@import '../vars';
+@import '../mixins';
+
+.footer {
+
+    &__wrapper {
+        background-color: $md_grey;
+    }
+
+    &__container {
+        overflow: hidden;
+        padding-top: 25px;
+        padding-bottom: 24px;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__logo {
+        margin-bottom: 28px;
+    }
+
+    &__social-wrapper {
+        margin-left: -2px;
+    }
+
+    &__right {
+        width: calc(100% - 437px);
+        display: flex;
+        justify-content: space-between;
+
+        &-wrapper {
+            display: flex;
+
+        }
+
+        &-wrapper:nth-child(2) {
+
+            .footer__item:first-child {
+                margin-right: 145px;
+
+            }
+        }
+
+        &-wrapper:first-child {
+
+            .footer__item:first-child {
+                margin-right: 113px;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__item-title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font: $regular-mobile-card-font;
+        color: $black;
+    }
+
+    &__item-link {
+        font: $regular-light-font;
+        color: $grey;
+    }
+
+    &__item-link:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &__bottom {
+        padding: 3px 0 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__bottom-content {
+        color: $grey;
+        font: $regular-glad-content-font;
+    }
+}
+
+.footer__bottom-date {
+    padding-left: 5px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    transition: $transitionBack;
+    outline: none;
+}
+
+.social-fb-link {
+    margin-right: 9px;
+
+}
+
+.link-effect {
+    transition: $transitionBack, $transitionColor;
+    outline: none;
+}
+
+.social-vk-link {
+    margin-right: 11px;
+}
+
+.logo-bottom {
+    max-width: 187px;
+    height: 27px;
+}
